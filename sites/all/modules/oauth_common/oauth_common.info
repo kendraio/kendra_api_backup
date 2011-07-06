@@ -1,0 +1,14 @@
+name = OAuth Common
+description = Provides common OAuth functionality
+dependencies[] = autoload
+dependencies[] = inputstream
+dependencies[] = ctools
+core = 6.x
+php = 5.2
+
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-2.x-dev"
+core = "6.x"
+project = "oauth_common"
+datestamp = "1298619787"
+

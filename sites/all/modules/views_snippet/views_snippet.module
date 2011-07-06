@@ -1,0 +1,48 @@
+<?php
+
+/**
+ *  Let Views know that we're implementing some stuff
+ */
+function views_snippet_views_api() {
+  return array('api' => 2.0);
+}
+
+/**
+ *  Preprocess the snippet output vars before they go to the template:
+ */
+function template_preprocess_views_view_snippet(&$vars) {
+  // do some XSS filtering:
+  $vars['options']['prefix'] = filter_xss_admin($vars['options']['prefix']);
+  $vars['options']['suffix'] = filter_xss_admin($vars['options']['suffix']);
+  $vars['options']['row_prefix'] = filter_xss_admin($vars['options']['row_prefix']);
+  $vars['options']['row_suffix'] = filter_xss_admin($vars['options']['row_suffix']);
+  // If debug output was enabled then show a message with the available field tokens:
+  if ($vars['options']['debug_output']) {
+    drupal_set_message('The following field tokens are available: ['. implode('], [', array_keys((array)$vars['view']->field)) .']');
+  }
+
+}
+
+/**
+ *  Preprocess the row output vars before they go to the template:
+ */
+function template_preprocess_views_view_row_snippet(&$vars) {
+  template_preprocess_views_view_fields(&$vars);
+  $keys = array();
+  $vals = array();
+  foreach (array_keys((array)$vars['fields']) as $key) {
+    $keys[] = "[{$key}]";
+    $vals[] = $vars['fields'][$key]->content;
+  }
+  $vars['rendered_row'] = filter_xss_admin(str_replace($keys, $vals, $vars['options']['pattern']));
+}
+
+
+
+
+
+
+
+
+
+

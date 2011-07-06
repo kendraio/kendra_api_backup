@@ -1,0 +1,13 @@
+name = Views Snippet
+description = Render a view as a configurable HTML snippet
+core = 6.x
+dependencies[] = views
+package = Views
+
+
+; Information added by drupal.org packaging script on 2010-11-12
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "views_snippet"
+datestamp = "1289564935"
+
