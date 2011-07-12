@@ -1,6 +1,6 @@
 # Kendra API
 
-A generalised API for Kendra incorporate the [Kendra Saracen Metadata API](http://atrium.kendra.org.uk/dev/kendra-saracen-metadata-api), Open Social, and eventually [IC Tomorrow](http://atrium.kendra.org.uk/dev/ic-tomorrow).
+A generalised API for Kendra Initiative.
 
 Now Available at https://github.com/kendrainitiative/kendra_api
 
