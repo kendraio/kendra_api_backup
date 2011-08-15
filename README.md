@@ -2,7 +2,7 @@
 
 A generalised API for Kendra Initiative.
 
-Now Available at https://github.com/kendrainitiative/kendra_api
+* SCM: https://github.com/kendrainitiative/kendra_api
 
 Kendra will provide an HTTP endpoint for making requests via the Kendra API.
 
