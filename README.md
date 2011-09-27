@@ -29,9 +29,3 @@ In addition to the live production API endpoint, a test endpoint will be availab
             Access-Control-Allow-Origin: *
         
     This will allow RESTful AJAX requests made via Javascript running in a third party host (*e.g.* a website, OpenSocial gadget, Javascript widget) to work correctly. Otherwise the browser would present the user with a security exception or fail silently due to the limits of the browser security model.
-
-# Actions
-
-* @Klokie & @Darren: Determine whether we will support JSON-RPC, RESTful method calls, both, or some combination of the two. This should take into consideration use of [Services 3](http://drupal.org/node/736522) and OpenSocial's Data API.
-* @Klokie: Define the format of the JSON message requests accepted and responses produced by the Services module, including error codes and descriptions and result sets.
-* @Klokie: Determine and document how WebID and HTTPS will be integrated with the API endpoint.
